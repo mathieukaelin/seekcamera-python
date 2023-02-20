@@ -18,7 +18,11 @@
 from threading import Condition
 
 import cv2
+import os
+import sys
 
+os.environ["SEEKTHERMAL_LIB_DIR"] = os.path.join(os.path.dirname(__file__), '..', '..', 'sdk', 'Seek_Thermal_SDK_4.2.0.7', 'x64-windows', 'lib')
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from seekcamera import (
     SeekCameraIOType,
     SeekCameraColorPalette,
